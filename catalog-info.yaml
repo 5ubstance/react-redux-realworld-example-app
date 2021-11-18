@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: react-redux-realworld-example-app
+  annotations:
+    github.com/project-slug: 5ubstance/react-redux-realworld-example-app
+spec:
+  type: other
+  lifecycle: unknown
+  owner: team-b
