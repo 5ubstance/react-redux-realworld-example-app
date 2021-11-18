@@ -33,9 +33,3 @@ spec:
               description: Null response
             default:
               description: unexpected error
-              content:
-                application/json:
-                  schema:
-                    $ref: "#/components/schemas/Error"
-  /things/{thingId}:
-
