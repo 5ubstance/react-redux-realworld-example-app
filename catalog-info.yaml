@@ -20,6 +20,22 @@ spec:
     servers:
       - url: http://some.url/v1
     paths:
-      /reactions:
+      /things:
         get:
-          summary: List all reactions
+          summary: List all things
+        post:
+          summary: Create a thing
+          operationId: createThings
+          tags:
+            - things
+          responses:
+            '201':
+              description: Null response
+            default:
+              description: unexpected error
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Error"
+  /things/{thingId}:
+
