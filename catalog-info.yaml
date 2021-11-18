@@ -1,10 +1,25 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: react-redux-realworld-example-app
+  description: Redux example app
   annotations:
     github.com/project-slug: 5ubstance/react-redux-realworld-example-app
 spec:
-  type: other
-  lifecycle: unknown
+  type: openapi
+  lifecycle: production
   owner: team-b
+  system: react-apps
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: React API
+      license:
+        name: MIT
+    servers:
+      - url: http://some.url/v1
+    paths:
+      /reactions:
+        get:
+          summary: List all reactions
